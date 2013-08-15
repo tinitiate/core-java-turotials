@@ -1,35 +1,46 @@
-Java is an Object oriented programming language
+Java Turotials in eloborate and well commented Code
 
+Venkata Bhattaram
+Tinitiate.com
 
-Each of the below java programs provides provides examples for the points in the Notes.
+0) Use all code at your own risk.
+1) Every piece of Java code in this Site, has notes in comments section of the code.
+2) Simple and portable { notes + code }.
+3) Read the comments and dig through the code, to understand.
+4) Self-contained single script, with tutorials and code, Written with sincere attempts.
+6) Easy and consolidated code with clear examples.
+7) Lot of Java Code files.
 
---[1]--
+CORE JAVA
+     Basic Syntax
+     Classes
+     Methods
+     Objects
+     Conditional (If..Else)
+     Iterative (Loops)
+     Arrays
+     Strings
+     Date / Time
+     Regular Expressions
+     File IO and User Input
+     OS Commands
+     Exceptions and ERRORS
+     Interface
+     Packages
+     Data Structures
+     Collections Framework
 
-   FileName: JavaPrint.java
-   
-   Notes:    1) Printing a Line to console using Java.
-             2) Adding single and multi line comments in the code.
+JAVA OBJECT ORIENTED PROGRAMMING
+     Inheritance
+     Polymorphism
+     Abstract Class
+     Over Riding
+     Encapsulation
 
---[2]--
-   FileName: JavaDataTypes.java
-   
-   Notes:    1) Declarations, initializations of variables.
-             2) Examples for simple data types.
-             3) Assignment of values to the variables.
-
---[3]--
-   FileName: JavaOperators.java
-   
-   Notes:    1) Operators Basics.
-             2) Special Operators.
-             3) Relational / Logical Operators.
-             4) Ternary Operator.
-
---[4]--
-   FileName: JavaControlStatements.java
-   
-   Notes:    1) if..else
-             2) Nested if..else if..else if....else
-             3) Switch Statement alternative to nested if..else if...else
-             4) Iterative (loops, while, do..while, for loop)
-             5) Loop control: break, continue
+ADVANCED JAVA
+     Serialization
+     Multithreading
+     Concurrency
+     JDBC Database
+     Reflection
+     Properties File
