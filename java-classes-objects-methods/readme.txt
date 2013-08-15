@@ -2,10 +2,12 @@
    FileName: Class_Intro.java
 
    Notes:    1) Classes
-                  This section shows you the anatomy of a class, and how to declare fields, methods, and constructors.
+                  This section shows you the anatomy of a class, and how to declare fields,
+                  methods, and constructors.
              2) Objects
-                  This section covers creating and using objects. You will learn how to instantiate an object
-                  and, once instantiated, how to use the dot operator to access the object's instance variables and methods.
+                  This section covers creating and using objects. You will learn how to
+                  instantiate an object and, once instantiated, how to use the dot operator
+                  to access the object's instance variables and methods.
              3) Member Variables and Methods
                   Member variables in a class—these are called fields.
                   Variables in a method or block of code—these are called local variables.
@@ -28,8 +30,10 @@
    
    Notes:    1) Examples for Methods
              2) Objects
-                  This section covers creating and using objects. You will learn how to instantiate an object
-                  and, once instantiated, how to use the dot operator to access the object's instance variables and methods.
+                  This section covers creating and using objects. You will learn how to 
+                  instantiate an object
+                  and, once instantiated, how to use the dot operator to access the object's
+                  instance variables and methods.
              3) * Object Properties
                 * Simple Constructor
    
