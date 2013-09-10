@@ -44,3 +44,6 @@ ADVANCED JAVA
      JDBC Database
      Reflection
      Properties File
+     XML
+     Annotations
+
