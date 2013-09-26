@@ -70,13 +70,13 @@ public class JavaJDBC {
     /**===========================================================**/
     // The Name of the Server/PC, on which the Oracle DB resides
     // The Name of the Server/PC, on which the Oracle DB resides
-    static String serverName = "xzur0536dor.zur.swissbank.com";
+    static String serverName = "db.tinitiate.com";
     // The PORT Number of the Oracle DB
-    static String portNumber = "1531";
+    static String portNumber = "1521";
     // The Instance Name of the Oracle DB
-    static String sid = "ARISKDEV";
-    static String schema = "limitp_tso";
-    static String password = "limitp_tso";
+    static String sid = "TintiateDB";
+    static String schema = "Tintiate";
+    static String password = "Tintiate";
     /**===========================================================**/
 
     // The URL to specify the driver.
