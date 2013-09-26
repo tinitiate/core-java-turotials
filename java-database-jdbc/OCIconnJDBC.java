@@ -12,7 +12,7 @@ class OCIconnJDBC {
         Class.forName ("oracle.jdbc.OracleDriver");
 
         Connection conn = DriverManager.getConnection
-             ("jdbc:oracle:oci8:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(PORT=1531)(HOST=xzur0536dor.zur.swissbank.com)))(CONNECT_DATA=(SERVICE_NAME=ARISKDEV)))", "limitp_tso", "limitp_tso");
+             ("jdbc:oracle:oci8:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(PORT=1531)(HOST=TinHost)))(CONNECT_DATA=(SERVICE_NAME=TinDEV)))", "tinitiate", "tinitiate");
                      // or oci7 @TNSNames_Entry,    userid,  password
         try { 
         Statement stmt = conn.createStatement();
