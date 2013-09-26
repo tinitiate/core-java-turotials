@@ -47,3 +47,9 @@ ADVANCED JAVA
      XML
      Annotations
 
+JAVA COMMAN LIBRARIES
+     JAVA MAIL
+     LOG4J
+     jUNIT
+     
+     
