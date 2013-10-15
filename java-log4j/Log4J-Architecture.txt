@@ -1,0 +1,40 @@
+#########
+# LOG4J #
+#########
+
+# LogManager
+Create or Retrive a Logger Object using the LogManager.getLogger 
+static method and passing the name of the desired Logger.
+
+#LoggerContext
+The LoggerContext acts as the anchor point for the Logging system.
+However, Log Separation is possible to by having multiple active 
+LoggerContexts in an application.
+
+#Appenders
+The output destination for the log message is called an Appender. 
+They could be console, files, Database Table, JMS..
+More than one Appender can be attached to a Logger.
+#Layouts
+customize output format, by associating a Layout with an Appender.
+
+#Filters
+Log4j provides Filters that can be applied 
+After passing control LoggerConfig 
+and Before calling any Appenders
+Filter return Accept, Deny or Neutral.
+    #Accept 
+    No other Filters should be called and the event should progress. 
+    #Deny
+    The event should be immediately ignored and control should be
+    returned to caller.
+    #Neutral 
+    Indicates the event should be passed to other Filters.
+If there are no other Filters the event will be processed. 
+
+#Configuration
+Every LoggerContext has an active Configuration. The Configuration 
+contains all the LoggerConfigs, Appenders and Filters.
+
+#Log Levels
+TRACE, DEBUG, INFO, WARN, ERROR and FATAL
