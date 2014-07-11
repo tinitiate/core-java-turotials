@@ -10,7 +10,8 @@ package com.tinitiate.java.jaxb;
 //            to convert Java objects to XML and XML to Java Objects.
 //            Marshalling    : convert Java objects to XML
 //            Un-Marshalling : content XML to Java objects.
-// 
+//            This program demonstrates the UnMarshalling process. 
+//
 //         2) Java JAXB is not directly comparable to DOM and SAX APIs, They are
 //            are lower-level APIs to parse XML documents.
 //
@@ -18,7 +19,7 @@ package com.tinitiate.java.jaxb;
 //             XML elements and attributes to a Java objects (and vice versa)
 //
 //         4) Implementations of JAXB would inturn use DOM or SAX parser under the 
-//  		  hood for actual XML parsing.
+//  		     hood for actual XML parsing.
 //
 //         5) JAXB was included as a standard library as part of the standard 
 //             JRE from 1.6 prior to 1.6 a manual install of the JAR was required.
@@ -99,6 +100,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 // This has the elements: album_name, artist and price
 // ======================================================
 class Album {
+   
+   // Variables for the Attribute
+   private String id;
+
    // Variables foreachof the elements of 
    // the nested element Album
    private String album_name;
@@ -108,16 +113,32 @@ class Album {
    // Constructors
    public Album() {}
    
-   public Album(String album_name, String artist, String price) {  
-       super();  
+   public Album(String id, String album_name, String artist, String price) {  
+       super();
+       this.id         = id;
        this.album_name = album_name;
        this.artist     = artist;
        this.price      = price;
    }
 
-   // =============================================
-   // getters and setters for each of the variables
-   // =============================================
+   // ============================================================
+   // getters and setters for each of the XML-ATTRIBUTE Variables
+   // ============================================================
+   // Annotate the XML Attribute (Getters only)
+   @XmlAttribute
+   public String getId() {
+      return id;
+   }
+
+   public void setId(String id) {
+      this.id = id;
+   }
+
+   // ==========================================================
+   // getters and setters for each of the XML-ELEMENT Variables
+   // ==========================================================
+   // Annotate the XML Elements (Getters only)
+   @XmlElement
    public String getAlbum_name() {
       return album_name;
    }
@@ -125,7 +146,9 @@ class Album {
    public void setAlbum_name(String album_name) {
       this.album_name = album_name;
    }
-
+   
+   // Annotate the XML Elements (Getters only)
+   @XmlElement
    public String getArtist() {
       return artist;
    }
@@ -134,6 +157,8 @@ class Album {
       this.artist = artist;
    }
 
+   // Annotate the XML Elements (Getters only)
+   @XmlElement
    public String getPrice() {
       return price;
    }
@@ -154,8 +179,8 @@ class Album {
 class Music {
   
    // Create One Variable per XML element/attribute
-   private String id; // Attribute
    private String music_year;
+   
    // The element "album" is nested,
    // Here we will be using the above Class
    // which represents the album nested XML element
@@ -164,17 +189,8 @@ class Music {
    // =============================================
    // getters and setters for each of the variables
    // =============================================
-   
-   // Annotate all the GETTERs
-   @XmlAttribute
-   public String getId() {
-      return id;
-   }
 
-   public void setId(String id) {
-      this.id = id;
-   }
-   
+   // Annotate the XML Elements (Getters only)
    @XmlElement
    public String getMusic_year() {
       return music_year;
@@ -184,6 +200,7 @@ class Music {
       this.music_year = music_year;
    }
    
+   // Annotate the XML Elements (Getters only)
    @XmlElement
    public List<Album> getAlbum() {
       return album;
@@ -197,7 +214,6 @@ class Music {
    public Music() {}
    public Music(String id, String music_year, List<Album> album) {
        super();
-       this.id           = id;
        this.music_year   = music_year;
        this.album        = album;
    }
@@ -224,9 +240,9 @@ public class JAXB_UnMarshalling {
          // Read the XML file into the file object
          File file = new File("C:\\tinitiate\\data.xml");
 
-         JAXBContext jaxbContext = JAXBContext.newInstance(Music.class);
+         JAXBContext jaxbObj = JAXBContext.newInstance(Music.class);
 
-         Unmarshaller jaxbUnmarshaller  = jaxbContext.createUnmarshaller();
+         Unmarshaller jaxbUnmarshaller  = jaxbObj.createUnmarshaller();
          
          //  Create an Elements
          Music xml_elements
@@ -243,12 +259,14 @@ public class JAXB_UnMarshalling {
          
          // Loop Through the List to print of each repeating elements in the XML
          for(Album a:album_obj) {
-            System.out.println( a.getArtist()
+            System.out.println("Album Element Attribute: "
+                               + a.getId() +
+                               " Album Sub Elements: "
+                               + " " + a.getArtist()
                                + " " + a.getAlbum_name()
                                + " " + a.getPrice()
                               );
-         }   
-        
+         }
       } catch (JAXBException e) {
          e.printStackTrace();
       }
