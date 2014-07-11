@@ -24,7 +24,7 @@ package com.tinitiate.java.jaxb;
 //             XML elements and attributes to a Java objects (and vice versa)
 //
 //         4) Implementations of JAXB would inturn use DOM or SAX parser under the 
-//  		     hood for actual XML parsing.
+//            hood for actual XML parsing.
 //
 //         5) JAXB was included as a standard library as part of the standard 
 //             JRE from 1.6 prior to 1.6 a manual install of the JAR was required.
@@ -61,7 +61,7 @@ package com.tinitiate.java.jaxb;
 //             <music_year>2014</music_year>
 //         </musicElement>
 //
-//			---- XML File Content End ----
+//       ---- XML File Content End ----
 //===================================================================================
 
 import java.util.List;
